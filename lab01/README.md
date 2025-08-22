@@ -21,28 +21,7 @@
   Debes de mostrar la cantidad correspondiente.
   
 - Ejermplos.
-
-  585
-De 500 hay 1
-De 200 hay 0
-De 100 hay 0
-De 50  hay 1
-De 25  hay 1
-De 10  hay 1
-De 5   hay 0
-De 1   hay 0
-
-385
-De 500 hay 0
-De 200 hay 1
-De 100 hay 1
-De 50  hay 1
-De 25  hay 1
-De 10  hay 1
-De 5   hay 0
-De 1   hay 0
-
-
+  ![Error al cargar imagen](Ejemplo.png)
 ## Tecnología Utilizada
 - Visual Studio Code.
 - Compilador GCC/G++.
@@ -51,3 +30,4 @@ De 1   hay 0
 
 ## ¿Qué cosas resaltantes aprendí en este laboratorio?
 - He aprendido a crear y gestionar un repositorio Git de forma local. También he logrado resolver problemas en la plataforma OmegaUp.
+
