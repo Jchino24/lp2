@@ -20,7 +20,7 @@
 
   Debes de mostrar la cantidad correspondiente.
   
-- Ejermplos.
+- Ejermplos.  
   ![Error al cargar imagen](Ejemplo.png)
 ## Tecnología Utilizada
 - Visual Studio Code.
@@ -30,4 +30,5 @@
 
 ## ¿Qué cosas resaltantes aprendí en este laboratorio?
 - He aprendido a crear y gestionar un repositorio Git de forma local. También he logrado resolver problemas en la plataforma OmegaUp.
+
 
