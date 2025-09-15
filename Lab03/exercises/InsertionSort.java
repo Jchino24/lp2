@@ -1,4 +1,6 @@
 // Java program for implementation of Insertion Sort
+import java.util.Scanner;
+
 public class InsertionSort {
     /* Function to sort array using insertion sort */
     void sort(int arr[])
@@ -8,9 +10,9 @@ public class InsertionSort {
             int key = arr[i];
             int j = i - 1;
 
-            /* Move elements of arr[0..i-1], that are
-               greater than key, to one position ahead
-               of their current position */
+            // Move elements of arr[0..i-1], that are
+            // greater than key, to one position ahead
+            // of their current position
             while (j >= 0 && arr[j] > key) {
                 arr[j + 1] = arr[j];
                 j = j - 1;
@@ -22,23 +24,34 @@ public class InsertionSort {
     /* A utility function to print array of size n */
     static void printArray(int arr[])
     {
-        int n = arr.length;
-        for (int i = 0; i < n; ++i)
+        for (int i = 0; i < arr.length; ++i)
             System.out.print(arr[i] + " ");
-
         System.out.println();
     }
 
     // Driver method
     public static void main(String args[])
     {
-        int arr[] = { 12, 11, 13, 5, 6 };
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("Ingrese la cantidad de números: ");
+        int n = sc.nextInt(); // Leer tamaño del arreglo
+
+        int arr[] = new int[n];
+
+        // Leer los números
+        System.out.println("Ingrese los números:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Ordenar y mostrar
         InsertionSort ob = new InsertionSort();
         ob.sort(arr);
 
+        System.out.println("Arreglo ordenado:");
         printArray(arr);
+
+        sc.close();
     }
 }
-
-/* This code is contributed by Hritik Shah. */
