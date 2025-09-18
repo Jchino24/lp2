@@ -1,157 +1,43 @@
-Lenguaje de Programación II
-Autor
+# Lenguaje de Programación II  
 
-[Tu nombre]
+# Autor  
+- Jose Carlos Chino Nina  
 
-Laboratorio 01: Ordenamiento con Insertion Sort
+## Laboratorio 03: Ordenamiento con Insertion Sort  
+- URL:  
+   
+  No aplica (problema de práctica de clase)  
+   
+- Descripción del problema:  
+   
+  En este laboratorio se implementa el algoritmo **Insertion Sort** para ordenar una lista de números enteros.  
+  El programa solicita al usuario ingresar la cantidad de números a ordenar, luego los números, y finalmente muestra el arreglo ordenado de menor a mayor.  
 
-URL:
-No aplica (problema de práctica de clase)
+- Input.  
 
-Descripción del problema:
-El objetivo es implementar el algoritmo de Insertion Sort para ordenar una lista de números enteros proporcionados por el usuario. El programa debe permitir ingresar el tamaño del arreglo, luego los valores, y finalmente mostrar el arreglo ordenado de menor a mayor.
+  Debes leer un número `n` que indica cuántos números ingresará el usuario y luego leer esos `n` números enteros.  
 
-Input:
+- Output.  
 
-La cantidad n de números a ordenar.
+  Debes mostrar los números ordenados de menor a mayor en una sola línea.  
 
-Los n números enteros.
+- Ejemplos.  
 
-Output:
+  ```text
+  Ingrese la cantidad de números: 5
+  Ingrese los números:
+  10 3 8 2 5
+  Arreglo ordenado:
+  2 3 5 8 10
 
-El arreglo ordenado de menor a mayor.
+## Tecnología Utilizada
+- Visual Studio Code.
+- JDK (Java Development Kit).
+- Git.
+- GitHub.
 
-Ejemplo de ejecución:
-
-Ingrese la cantidad de números: 5
-Ingrese los números:
-10 3 8 2 5
-Arreglo ordenado:
-2 3 5 8 10
-
-Tecnología Utilizada:
-
-Visual Studio Code
-
-JDK (Java Development Kit)
-
-Git
-
-GitHub
-
-¿Qué cosas resaltantes aprendí en este laboratorio?
-
-Implementar el algoritmo de Insertion Sort en Java.
-
-Usar la clase Scanner para recibir datos desde la consola.
-
-Crear y compilar un proyecto en Java desde el editor VS Code.
-
-Administrar el código en un repositorio Git de forma local y remota.
-
-¿Quieres que te lo haga en formato README.md listo para subir a GitHub (con títulos y formato Markdown correcto)?
-
-Tú dijiste:
-es el lab 03 y mi nombre es el mismo de arriba
-ChatGPT Plus
-
-Perfecto, entonces lo ajustamos para que sea Laboratorio 03 y con tu nombre. Aquí te dejo el documento listo en Markdown para que lo uses como README.md en tu repositorio o lo copies en tu entrega:
-
-Lenguaje de Programación II
-Autor
-
-Jose Carlos Chino Nina
-
-Laboratorio 03: Ordenamiento con Insertion Sort
-
-URL:
-No aplica (problema de práctica de clase)
-
-Descripción del problema:
-En este laboratorio se implementa el algoritmo de Insertion Sort para ordenar una lista de números enteros.
-El programa solicita al usuario ingresar la cantidad de números a ordenar, luego cada número, y finalmente muestra el arreglo ordenado de menor a mayor.
-
-Input:
-
-Un número entero n que indica cuántos elementos tendrá el arreglo.
-
-n números enteros que serán los elementos a ordenar.
-
-Output:
-
-El arreglo ordenado en orden ascendente.
-
-Ejemplo de ejecución:
-
-Ingrese la cantidad de números: 5
-Ingrese los números:
-10 3 8 2 5
-Arreglo ordenado:
-2 3 5 8 10
-
-
-Código Fuente:
-
-// Java program for implementation of Insertion Sort
-import java.util.Scanner;
-
-public class InsertionSort {
-    void sort(int arr[]) {
-        int n = arr.length;
-        for (int i = 1; i < n; ++i) {
-            int key = arr[i];
-            int j = i - 1;
-            while (j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
-                j = j - 1;
-            }
-            arr[j + 1] = key;
-        }
-    }
-
-    static void printArray(int arr[]) {
-        for (int i = 0; i < arr.length; ++i)
-            System.out.print(arr[i] + " ");
-        System.out.println();
-    }
-
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese la cantidad de números: ");
-        int n = sc.nextInt();
-        int arr[] = new int[n];
-
-        System.out.println("Ingrese los números:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        InsertionSort ob = new InsertionSort();
-        ob.sort(arr);
-
-        System.out.println("Arreglo ordenado:");
-        printArray(arr);
-        sc.close();
-    }
-}
-
-
-Tecnología Utilizada:
-
-Visual Studio Code
-
-JDK (Java Development Kit)
-
-Git
-
-GitHub
-
-¿Qué cosas resaltantes aprendí en este laboratorio?
-
-Cómo implementar y comprender el funcionamiento del algoritmo de Insertion Sort.
-
-Uso de la clase Scanner para recibir datos desde la consola.
-
-Compilación y ejecución de programas en Java.
-
-Manejo de repositorios Git para control de versiones.
+## ¿Qué cosas resaltantes aprendí en este laboratorio?
+- He aprendido a implementar el algoritmo de **Insertion Sort** en Java.
+- He practicado la lectura de datos desde consola usando la clase `Scanner`.
+- He entendido el funcionamiento de un algoritmo de ordenamiento paso a paso.
+- He gestionado el código en un repositorio Git de forma local.
