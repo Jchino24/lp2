@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.Random;
+
 public class InsertionSort {
     
     void sort(int arr[])
@@ -20,17 +23,38 @@ public class InsertionSort {
         int n = arr.length;
         for (int i = 0; i < n; ++i)
             System.out.print(arr[i] + " ");
-
         System.out.println();
     }
-    
+
+    // Genera arreglo aleatorio de tamaño N
+    static int[] generarArreglo(int N) {
+        int[] arr = new int[N];
+        Random rand = new Random();
+
+        for (int i = 0; i < N; i++) {
+            arr[i] = rand.nextInt(100) + 1; // entre 1 y 100
+        }
+
+        return arr;
+    }
+
     public static void main(String args[])
     {
-        int arr[] = { 12, 11, 13, 5, 6 };
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el tamaño del arreglo (N): ");
+        int N = sc.nextInt();
+
+        int arr[] = generarArreglo(N);
+
+        System.out.println("Arreglo generado:");
+        printArray(arr);
 
         InsertionSort ob = new InsertionSort();
         ob.sort(arr);
 
+        System.out.println("Arreglo ordenado:");
         printArray(arr);
+
+        sc.close();
     }
 }
