@@ -5,9 +5,9 @@ public class InsertionSort {
 
     static void printArray(int n) {
         System.out.print("(");
-        for (int i = 1; i <= n; i++) {
-            if (i > 1) System.out.print(",");
+        for (int i = n; i >= 1; i--) {
             System.out.print(i);
+            if (i > 1) System.out.print(",");
         }
         System.out.println(")");
     }
@@ -16,10 +16,12 @@ public class InsertionSort {
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese el tamaño máximo del arreglo (N): ");
         int N = sc.nextInt();
+
         for (int tam = 1; tam <= N; tam++) {
             System.out.print("Arreglo de tamaño " + tam + ": ");
             printArray(tam);
         }
+
         sc.close();
     }
 }
