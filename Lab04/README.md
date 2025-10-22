@@ -1,72 +1,89 @@
-# Lenguaje de Programación II
+# Laboratorio 04: Cálculo de Integrales por el Método del Trapecio (con Hilos)
 
-## Autor
-**Jose Carlos Chino Nina**
-
-## Laboratorio 04: Cálculo de Integrales por el Método del Trapecio (con Hilos)
-
-**URL:**  
-No aplica (problema de práctica de clase)
+**Curso:** Lenguaje de Programación II  
+**Autor:** Jose Carlos Chino Nina  
+**URL:** No aplica (problema de práctica de clase)
 
 ---
 
-### 📘 Descripción del problema
+## Descripción del problema
 
-En este laboratorio se implementa el **método del trapecio** para calcular de forma aproximada la integral definida de una función constante.  
-El programa está diseñado en **Java** y utiliza **hilos (threads)** para dividir el trabajo de cálculo entre varios núcleos del procesador, aprovechando al máximo los recursos del sistema.
+En este laboratorio se implementa el método del trapecio para calcular de forma aproximada la integral definida de una función matemática.
 
-El usuario ingresa los límites de integración, el número de subintervalos y el valor constante de la función a integrar.
+El programa está desarrollado en Java y utiliza hilos (threads) para dividir el trabajo de cálculo entre varios núcleos del procesador, mejorando el rendimiento y aprovechando el paralelismo del sistema.
 
----
+A diferencia de la versión inicial (que integraba solo funciones constantes), esta versión permite ingresar cualquier función algebraica, por ejemplo:
 
-### 🧮 Input
-
-El programa solicita:
-
-1. El valor constante de la función \( f(x) = c \).  
-2. El límite inferior (**a**) de la integral.  
-3. El límite superior (**b**) de la integral.  
-4. El número de subintervalos (**n**).
+2xx + 5
+3*x + 2
+Math.sin(x)
 
 ---
 
-### 🧾 Output
+## Entrada (Input)
 
-El resultado aproximado de la integral definida, calculado con el método del trapecio.
+El programa solicita los siguientes datos al usuario:
 
----
-
-### 💻 Ejemplo de ejecución
-
- 
-
-  ```text
-  === MÉTODO DEL TRAPECIO BÁSICO CON HILOS ===
-Ingrese el valor constante f(x) = 2
-Ingrese el límite inferior (a): 0
-Ingrese el límite superior (b): 5
-Ingrese el número de subintervalos (n): 1000
-Usando 16 hilos...
-
-Resultado aproximado de la integral: 10.000000
+1. Función `f(x)` (por defecto: `2*x*x + 5`)
+2. Límite inferior (a)
+3. Límite superior (b)
+4. Número de subintervalos (n)
+5. (Opcional) Cantidad de decimales para el resultado final
 
 ---
 
-### ⚙️ Tecnología Utilizada
+## Salida (Output)
 
-- **Visual Studio Code**
-- **JDK (Java Development Kit)**
-- **Git**
-- **GitHub**
+El programa muestra:
+
+- Los valores parciales calculados por los hilos (sub-áreas representadas entre corchetes `[ ... ]`)
+- El resultado aproximado de la integral definida
+- El número de trapecios utilizados
+- Un mensaje final indicando el área ideal encontrada
 
 ---
 
-### 🚀 ¿Qué cosas resaltantes aprendí en este laboratorio?
+## Ejemplo de ejecución
 
-- He aprendido a **implementar el método del trapecio** en Java para aproximar integrales definidas.  
-- He practicado el uso de **hilos (threads)** para dividir el trabajo computacional.  
-- He comprendido cómo mejorar el rendimiento de un programa mediante **paralelismo**.  
-- He reforzado el uso de la clase **Scanner** para la lectura de datos desde consola.  
-- He gestionado el código en un repositorio **Git** de forma local y remota.
+=== MÉTODO DEL TRAPECIO CON HILOS ===
+
+Ingrese función (ej. 2xx + 5): 2xx + 5
+
+Límite inferior (a): 2
+
+Límite superior (b): 10
+
+Número de subintervalos (n): 100
+
+Usando 8 hilos...
+
+[250.00][300.00][320.00][350.00]...[400.00]
+
+Se encontró el área ideal con 100 trapecios a 2 decimales = 713.55
+
+Gracias.
+
+---
+
+## Tecnología Utilizada
+
+- Java (JDK 17+)
+- Multithreading (Thread API)
+- ScriptEngine (evaluación dinámica de funciones)
+- Visual Studio Code
+- Git / GitHub
+
+---
+
+## Aprendizajes Clave
+
+Durante este laboratorio se logró:
+
+- Implementar el método del trapecio para aproximar integrales definidas.  
+- Utilizar hilos (threads) para paralelizar el proceso de integración.  
+- Comprender el uso del ScriptEngine de Java para evaluar expresiones algebraicas en tiempo de ejecución.  
+- Optimizar el desempeño del cálculo usando varios núcleos del CPU.  
+- Mejorar la salida del programa con un formato numérico controlado y legible.  
+- Reforzar la práctica con herramientas de control de versiones como Git y GitHub.
 
 ---
